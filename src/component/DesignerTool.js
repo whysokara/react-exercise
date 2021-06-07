@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const DesignerTool = () => {
   const [headerSize, setHeaderSize] = useState(32);
@@ -6,7 +6,7 @@ const DesignerTool = () => {
 
   const increaseSize = (type) => {
     if (type === "header") {
-      setHeaderSize((headerSize) => headerSize + 8);
+      if (headerSize) setHeaderSize((headerSize) => headerSize + 8);
     } else {
       setTextSize((textSize) => textSize + 8);
     }
